@@ -1,6 +1,6 @@
 # Privacy Policy — Billable
 
-**Last updated:** 2026-08-13
+**Last updated:** 2026-08-16
 
 **Billable — Time Tracker & Invoicing** ("the extension") is built to work
 without collecting or transmitting your personal data. Signup-free and
@@ -12,11 +12,14 @@ The extension stores the following data **locally, on your device**, using
 the browser's built-in extension storage APIs. This data is never sent to
 us or any third party:
 
-- Your clients (name, hourly rate, currency) and tracked time entries
+- Your clients (name, hourly rate, currency, billing cutoff), saved tasks,
+  and tracked time entries
   (client, note, start/end time, any idle time you chose to deduct,
   whether it's been billed)
-- Invoicing settings (your business name, tax rate, invoice numbering) and
-  the generated invoice/statement currently open for printing
+- Invoicing settings (your business name, tax rate, invoice numbering),
+  generated invoices, and invoice history
+- Cached Billable Pro license status and the number of free invoice
+  generations used
 - Install date (stored locally; not transmitted)
 
 ## What we don't do
@@ -25,20 +28,29 @@ us or any third party:
 - We do not use cookies, fingerprinting, or any tracking identifiers.
 - We do not sell or share data with third parties, because we don't
   collect any to begin with.
-- **The current version of the extension makes no network requests at
-  all.** It works fully offline.
+- We do not send your clients, saved tasks, time entries, rates, notes,
+  invoice details, or generated documents over the network. Time tracking
+  and access to your locally stored work data continue to work offline.
 
-## Payments (future)
+## Payments
 
-All features are currently free. If optional paid features are introduced
-in a future update, payment processing will be handled by
+Time tracking, editing, and data exports are free. After three free invoice
+generations, unlimited invoicing is available through the optional Billable
+Pro subscription.
+
+Payments and subscription status are handled by
 [ExtensionPay](https://extensionpay.com), a third-party payment service
-for browser extensions, together with its payment processor Stripe. In
-that case, the extension will contact ExtensionPay's servers only to check
-paid status or open the payment page, and ExtensionPay's
-[privacy policy](https://extensionpay.com/privacy) will govern that data.
-We never see or store your payment details (such as card numbers)
-ourselves. This policy will be updated when that change ships.
+for browser extensions, together with its payment processor Stripe. When the
+extension checks your Pro status or opens a payment or subscription-management
+page, it communicates with ExtensionPay. ExtensionPay may process the email
+address used to purchase or restore access and the associated license and
+subscription status. Its [privacy policy](https://extensionpay.com/privacy)
+governs that processing.
+
+Card and billing details are entered on Stripe-hosted pages and processed by
+Stripe. We never receive or store your card number or other payment-card
+credentials. Your locally stored Billable work data is not sent to
+ExtensionPay or Stripe.
 
 ## Permissions
 
@@ -50,7 +62,10 @@ The extension requests only three permissions:
 - **alarms** — to refresh the toolbar badge about once a minute while a
   timer is running
 
-It does not request access to the websites you visit.
+It does not access ordinary websites you visit. A narrowly scoped content
+script runs only on `https://extensionpay.com/*` to relay payment or
+restored-access confirmation to the extension. It does not collect that
+page's content or your browsing history.
 
 ## Contact
 
