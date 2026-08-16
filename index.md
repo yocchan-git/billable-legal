@@ -2,9 +2,10 @@
 
 **Last updated:** 2026-08-16
 
-**Billable — Time Tracker & Invoicing** ("the extension") is built to work
-without collecting or transmitting your personal data. Signup-free and
-offline-capable by design — everything you track stays on your device.
+**Billable — Time Tracker & Invoicing** ("the extension") is designed to
+keep your work data on your device. It handles the local data described below
+and communicates with ExtensionPay and Stripe only for optional payment and
+subscription features.
 
 ## What the extension stores
 
@@ -26,8 +27,8 @@ us or any third party:
 
 - We do not collect analytics, usage tracking, or telemetry.
 - We do not use cookies, fingerprinting, or any tracking identifiers.
-- We do not sell or share data with third parties, because we don't
-  collect any to begin with.
+- We do not sell user data or transfer it for advertising, analytics,
+  credit decisions, or unrelated purposes.
 - We do not send your clients, saved tasks, time entries, rates, notes,
   invoice details, or generated documents over the network. Time tracking
   and access to your locally stored work data continue to work offline.
