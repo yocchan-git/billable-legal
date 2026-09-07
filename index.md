@@ -1,6 +1,6 @@
 # Privacy Policy — Billable v1.3.0
 
-**Last updated:** 2026-09-06
+**Last updated:** 2026-09-07
 
 Billable — Time Tracker & Invoicing ("Billable") is designed to keep work and invoicing data on the user's device. Billable has no Billable-operated cloud account or server for that data.
 
@@ -34,6 +34,10 @@ Billable does not receive or store payment-card details. Billable work and invoi
 - It does not sell or transfer work or invoice data for advertising, analytics, credit decisions, or unrelated purposes.
 - It does not provide cloud synchronization, an account service, automated email sending, or remote code execution.
 - Core local features continue to work offline.
+
+## Chrome Web Store Limited Use
+
+Billable's use of user data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Billable uses user data only to provide or improve its time-tracking and invoicing features and does not use it for advertising, credit decisions, or unrelated purposes.
 
 ## Permissions
 
