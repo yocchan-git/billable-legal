@@ -1,77 +1,54 @@
-# Privacy Policy — Billable
+# Privacy Policy — Billable v1.3.0
 
-**Last updated:** 2026-08-16
+**Last updated:** 2026-09-06
 
-**Billable — Time Tracker & Invoicing** ("the extension") is designed to
-keep your work data on your device. It handles the local data described below
-and communicates with ExtensionPay and Stripe only for optional payment and
-subscription features.
+Billable — Time Tracker & Invoicing ("Billable") is designed to keep work and invoicing data on the user's device. Billable has no Billable-operated cloud account or server for that data.
 
-## What the extension stores
+## Data stored locally on the device
 
-The extension stores the following data **locally, on your device**, using
-the browser's built-in extension storage APIs. This data is never sent to
-us or any third party:
+Billable stores the following data in the browser's extension storage on the user's device:
 
-- Your clients (name, hourly rate, currency, billing cutoff), saved tasks,
-  and tracked time entries
-  (client, note, start/end time, any idle time you chose to deduct,
-  whether it's been billed)
-- Invoicing settings (your business name, tax rate, invoice numbering),
-  generated invoices, and invoice history
-- Cached Billable Pro license status and the number of free invoice
-  generations used
-- Install date (stored locally; not transmitted)
+- Client details: names, addresses, email addresses, hourly rates, currencies, and billing cutoffs. Issuer details: business/name, address, email address, phone number, and tax identifier.
+- Time records and saved tasks: client association, notes, timestamps, idle-time choices, and billing association.
+- Invoice data: draft and confirmed invoice details, invoice numbers, dates, issuer tax identifiers, global payment instructions and terms, notes, and status/history.
+- Recipient information entered for fixed invoice message preparation.
+- Product data needed to operate locally, including the number of invoice confirmations used and cached subscription status.
 
-## What we don't do
+This local data is not sent to Billable servers because Billable does not operate a server for it. Where supported by the browser, Billable restricts `storage.local` to trusted extension contexts. This is a browser access control and is not encryption; users should protect access to their device and browser profile.
 
-- We do not collect analytics, usage tracking, or telemetry.
-- We do not use cookies, fingerprinting, or any tracking identifiers.
-- We do not sell user data or transfer it for advertising, analytics,
-  credit decisions, or unrelated purposes.
-- We do not send your clients, saved tasks, time entries, rates, notes,
-  invoice details, or generated documents over the network. Time tracking
-  and access to your locally stored work data continue to work offline.
+## Email assistance
 
-## Payments
+Billable does not send email, connect to an email inbox, or attach files. Only after an explicit user action to create an email does Billable pass the reviewed recipient, subject, and plain-text body to the operating system or browser's configured mail application through a mailto link. Users may instead copy the subject or body themselves.
 
-Time tracking, editing, and data exports are free. After three free invoice
-generations, unlimited invoicing is available through the optional Billable
-Pro subscription.
+The global billing-default payment-instructions field is free text. Billable warns users not to enter card numbers, passwords, private keys, or other authentication secrets in it.
 
-Payments and subscription status are handled by
-[ExtensionPay](https://extensionpay.com), a third-party payment service
-for browser extensions, together with its payment processor Stripe. When the
-extension checks your Pro status or opens a payment or subscription-management
-page, it communicates with ExtensionPay. ExtensionPay may process the email
-address used to purchase or restore access and the associated license and
-subscription status. Its [privacy policy](https://extensionpay.com/privacy)
-governs that processing.
+## Payments and subscriptions
 
-Card and billing details are entered on Stripe-hosted pages and processed by
-Stripe. We never receive or store your card number or other payment-card
-credentials. Your locally stored Billable work data is not sent to
-ExtensionPay or Stripe.
+Billable offers an optional Billable Pro subscription. ExtensionPay and its payment processor Stripe handle payment and subscription-management flows. When a user checks subscription status or opens a payment or subscription-management page, ExtensionPay may process purchase-related account information, such as the email address used for purchase, license status, and subscription status, under its own policy: [ExtensionPay Privacy Policy](https://extensionpay.com/privacy).
+
+Billable does not receive or store payment-card details. Billable work and invoice data are not sent to ExtensionPay or Stripe.
+
+## What Billable does not do
+
+- It does not collect analytics, telemetry, advertising identifiers, cookies, fingerprinting data, browsing history, or ordinary website content.
+- It does not sell or transfer work or invoice data for advertising, analytics, credit decisions, or unrelated purposes.
+- It does not provide cloud synchronization, an account service, automated email sending, or remote code execution.
+- Core local features continue to work offline.
 
 ## Permissions
 
-The extension requests only three permissions:
+Billable requests these permissions only:
 
-- **storage** — to save your clients, time entries, and settings locally
-- **idle** — to detect when you step away while a timer is running, so
-  you can choose to deduct that time
-- **alarms** — to refresh the toolbar badge about once a minute while a
-  timer is running
+- **storage** — saves the local work, invoice, backup, and cached license data described above.
+- **idle** — detects inactivity or screen lock while a timer is running so the user can choose whether to deduct away time.
+- **alarms** — refreshes the running-timer toolbar badge approximately once a minute.
 
-It does not access ordinary websites you visit. A narrowly scoped content
-script runs only on `https://extensionpay.com/*` to relay payment or
-restored-access confirmation to the extension. It does not collect that
-page's content or your browsing history.
+Billable declares no Chrome host permissions. Its existing ExtensionPay payment-confirmation content script is limited to `https://extensionpay.com/*`; it does not read ordinary browsing content or browsing history.
 
-## Contact
+## Retention and user control
 
-Questions about this policy: **billable.extension@gmail.com**
+Invoice history is not automatically deleted. Users can export local JSON backups. Clearing browser data, uninstalling the extension, losing a device, or losing a browser profile can remove locally stored data; users are responsible for keeping backups.
 
-## Changes
+## Contact and changes
 
-We'll update the "Last updated" date above if this policy changes.
+Questions about this policy: **billable.extension@gmail.com**. Material changes will be reflected here and identified by the "Last updated" date above.
